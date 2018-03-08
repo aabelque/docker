@@ -1,0 +1,13 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    28                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: aabelque <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/03/08 11:32:13 by aabelque          #+#    #+#              #
+#    Updated: 2018/03/08 11:39:28 by aabelque         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+docker service create --name marines --replicas 2 -e OC_USERNAME=rabbitmq -e OC_PASSWD=rabbitmq --network overmind 42school/marine-squad
