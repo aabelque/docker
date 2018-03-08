@@ -1,0 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    19                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: aabelque <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/02/19 14:27:16 by aabelque          #+#    #+#              #
+#    Updated: 2018/02/19 15:06:08 by aabelque         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+docker-machine ssh Char mkdir /home/Abathur
+docker-machine scp hello.py Char:/home/Abathur
+docker run -d --name Abathur -p 3000:3000 -v /home/Abathur:/root -e FLASK_APP=hello.py -w /root python:2-slim bash -c 'pip install flask && flask run --host=0.0.0.0 --port=3000'

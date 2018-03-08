@@ -1,0 +1,13 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    26                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: aabelque <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/02/21 17:48:23 by aabelque          #+#    #+#              #
+#    Updated: 2018/02/21 17:48:55 by aabelque         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+docker service create --name engineering-bay --replicas 2 -e OC_USERNAME=rabbitmq -e OC_PASSWD=rabbitmq --network overmind 42school/engineering-bay

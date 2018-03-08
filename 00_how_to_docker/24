@@ -1,0 +1,13 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    24                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: aabelque <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/02/21 16:54:47 by aabelque          #+#    #+#              #
+#    Updated: 2018/02/21 16:57:40 by aabelque         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+docker service create --hostname orbital-command --name orbital-command -e RABBITMQ_DEFAULT_USER=rabbitmq -e RABBITMQ_DEFAULT_PASS=rabbitmq --network overmind rabbitmq
